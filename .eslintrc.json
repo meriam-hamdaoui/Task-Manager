@@ -16,6 +16,9 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "react", "prettier"],
-  "rules": {},
+  "rules": {
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn"
+  },
   "settings": { "import/resolver": { "typescript": {} } }
 }

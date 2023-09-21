@@ -19,3 +19,12 @@ export const avatarSX: CSSProperties = {
   backgroundColor: 'primary.main',
   marginBottom: '16px',
 };
+
+export const createTaskBox: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  width: '100%',
+  padding: '0 4px',
+  margin: '6px 0',
+};
