@@ -4,6 +4,9 @@ import { createTaskBox } from '../../../theme/cssObject';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
 import { TaskDateField } from './_taskDateField';
+import { TaskSelectField } from './_taskSelectField';
+import { Status } from './enums/Status';
+import { Priority } from './enums/Priority';
 
 export const CreateTaskForm: FC = (): ReactElement => {
   return (
@@ -19,8 +22,46 @@ export const CreateTaskForm: FC = (): ReactElement => {
         <TaskDescriptionField />
         {/* task date */}
         <TaskDateField />
+        <Stack
+          direction={'row'}
+          sx={{ width: '100%' }}
+          spacing={2}
+        >
+          {/* task selector : priority + progress */}
+          <TaskSelectField
+            label="Status"
+            name="status"
+            items={[
+              {
+                label: Status.TODO.toUpperCase(),
+                value: Status.TODO,
+              },
+              {
+                label: Status.IN_PROGRESS.toUpperCase(),
+                value: Status.IN_PROGRESS,
+              },
+            ]}
+          />
+          <TaskSelectField
+            label="Priority"
+            name="priority"
+            items={[
+              {
+                label: Priority.LOW.toUpperCase(),
+                value: Priority.LOW,
+              },
+              {
+                label: Priority.HIGH.toUpperCase(),
+                value: Priority.HIGH,
+              },
+              {
+                label: Priority.NORMAL.toUpperCase(),
+                value: Priority.NORMAL,
+              },
+            ]}
+          />
+        </Stack>
       </Stack>
-      {/* task selector : priority + progress */}
       {/* form button */}
     </Box>
   );
