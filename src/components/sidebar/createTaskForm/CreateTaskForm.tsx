@@ -17,9 +17,9 @@ export const CreateTaskForm: FC = (): ReactElement => {
         <TaskTitleField />
         {/* task description */}
         <TaskDescriptionField />
+        {/* task date */}
+        <TaskDateField />
       </Stack>
-      {/* task date */}
-      <TaskDateField />
       {/* task selector : priority + progress */}
       {/* form button */}
     </Box>
