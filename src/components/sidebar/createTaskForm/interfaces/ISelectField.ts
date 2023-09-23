@@ -8,20 +8,8 @@ export interface ISelectItem {
 
 export interface ISelectField extends IDisabled {
   label?: string;
-  value?: string;
   name?: string;
+  value?: string;
   onChange?: (e: SelectChangeEvent) => void;
-  items?: ISelectItem[];
+  items: Array<ISelectItem> | [];
 }
-
-// export interface ISelectItems {
-//   value: string;
-//   label: string;
-// }
-// export interface ISelectField extends IDisabled {
-//   name?: string;
-//   label?: string;
-//   value?: string;
-//   onChange?: (e: SelectChangeEvent) => void;
-//   items: Array<ISelectItems>;
-// }

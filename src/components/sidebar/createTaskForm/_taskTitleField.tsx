@@ -4,7 +4,7 @@ import { ITextField } from './interfaces/ITextField';
 import PropTypes from 'prop-types';
 
 export const TaskTitleField: FC<ITextField> = ({
-  // this 2 default values so our ts don't throw error
+  // these are 2 default values so our ts don't throw error
   onChange = (e) => console.log(e),
   disabled = false,
 }): ReactElement => {

@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { TextField } from '@mui/material';
 import { IDateField } from './interfaces/IDateField';
@@ -13,13 +13,13 @@ export const TaskDateField: FC<IDateField> = ({
   return (
     <>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <DesktopDatePicker
+        <DatePicker
           label="Task Date"
           format="dd/MM/yyyy"
           value={value}
           onChange={onChange}
           disabled={disabled}
-          slotProps={{
+          slots={{
             textField: (params) => (
               <TextField {...params} />
             ),

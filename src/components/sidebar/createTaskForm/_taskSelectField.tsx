@@ -8,25 +8,17 @@ import {
 } from '@mui/material';
 import { ISelectField } from './interfaces/ISelectField';
 import PropTypes from 'prop-types';
-
 export const TaskSelectField: FC<ISelectField> = (
   props,
 ): ReactElement => {
   const {
-    label = 'select box',
+    name = '',
     value = '',
-    name = 'select box',
+    label = 'Status',
     disabled = false,
+    items = [{ label: 'create one', value: '' }],
     onChange = (e: SelectChangeEvent) => console.log(e),
-    items = [
-      {
-        label: 'add items',
-        value: '',
-      },
-    ],
   } = props;
-
-  console.log(props);
 
   return (
     <FormControl fullWidth size="small">
@@ -34,18 +26,15 @@ export const TaskSelectField: FC<ISelectField> = (
       <Select
         labelId={`${name}-id`}
         id={`${name}-id-select`}
-        value={value}
         label={label}
         name={name}
+        value={value}
         onChange={onChange}
         disabled={disabled}
       >
-        {items.map((item, index) => (
-          <MenuItem
-            key={item.value + index}
-            value={item.value}
-          >
-            {item.label}
+        {items.map((el, index) => (
+          <MenuItem key={el.label + index} value={el.value}>
+            {el.label}
           </MenuItem>
         ))}
       </Select>
@@ -56,7 +45,7 @@ export const TaskSelectField: FC<ISelectField> = (
 TaskSelectField.propTypes = {
   onChange: PropTypes.func,
   label: PropTypes.string,
-  name: PropTypes.string,
+  value: PropTypes.string,
   disabled: PropTypes.bool,
   items: PropTypes.array.isRequired,
 };
