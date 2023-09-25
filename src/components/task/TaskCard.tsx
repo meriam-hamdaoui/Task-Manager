@@ -2,6 +2,7 @@ import React, { FC, ReactElement } from 'react';
 import { Box } from '@mui/material';
 import { taskCardBox } from './../../theme/cssObject';
 import { TaskHeader } from './_taskHeader';
+import { TaskDescription } from './_taskDescription';
 export const TaskCard: FC = (): ReactElement => {
   return (
     <Box
@@ -11,6 +12,7 @@ export const TaskCard: FC = (): ReactElement => {
       {/* header */}
       <TaskHeader />
       {/* description */}
+      <TaskDescription />
       {/* footer */}
     </Box>
   );
