@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import { format } from 'date-fns';
 import { taskCounterGrid } from '../../theme/cssObject';
 import { TaskCounter } from '../taskCounter/TaskCounter';
+import { TaskCard } from 'components/task/TaskCard';
 export const TaskArea: FC = (): ReactElement => {
   return (
     <Grid item md={8} px={2} my={4}>
@@ -33,9 +34,11 @@ export const TaskArea: FC = (): ReactElement => {
           xs={10}
           md={8}
         >
-          <Box>tasks cards</Box>
-          <Box>tasks cards</Box>
-          <Box>tasks cards</Box>
+          <Box>
+            <TaskCard />
+            <TaskCard />
+            <TaskCard />
+          </Box>
         </Grid>
       </Grid>
     </Grid>

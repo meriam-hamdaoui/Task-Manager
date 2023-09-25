@@ -49,3 +49,15 @@ export const taskCounterGrid: CSSProperties = {
   alignItems: 'center',
   marginBottom: '80px',
 };
+
+export const taskCardBox: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'flex-start',
+  flexDirection: 'column',
+  marginBottom: '20px',
+  padding: '40px',
+  width: '100%',
+  backgroundColor: 'background.paper',
+  borderRadius: '8px',
+  border: '1px solid',
+};
