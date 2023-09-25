@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import { Grid } from '@mui/material';
-import { dashboardSX } from '../../theme/cssObject';
+import { dashboardSX } from '@theme/cssObject';
 import { Profile } from './Profile';
 import { CreateTaskForm } from './createTaskForm/CreateTaskForm';
 

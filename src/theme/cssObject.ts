@@ -1,23 +1,37 @@
 import { CSSProperties } from 'react';
 
-export const dashboardSX: CSSProperties = {
-  height: '100vh',
-  position: 'fixed',
-  right: 0,
-  top: 0,
-  width: '100%',
-  backgroundColor: 'background.paper',
+export const flexColumn: CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
   alignItems: 'center',
 };
 
-export const avatarSX: CSSProperties = {
+export const dashboardSX: CSSProperties = {
+  ...flexColumn,
+  height: '100vh',
+  position: 'fixed',
+  right: 0,
+  top: 0,
+  width: '100%',
+  backgroundColor: 'background.paper',
+};
+
+const avatarCSS: CSSProperties = {
   width: '96px',
   height: '96px',
-  backgroundColor: 'primary.main',
   marginBottom: '16px',
+};
+export const avatarSX: CSSProperties = {
+  ...avatarCSS,
+  backgroundColor: 'primary.main',
+};
+
+export const counterAvatar: CSSProperties = {
+  ...avatarCSS,
+  border: '5px solid',
+  borderColor: 'warning.light',
+  backgroundColor: 'transparent',
 };
 
 export const createTaskBox: CSSProperties = {
@@ -25,6 +39,14 @@ export const createTaskBox: CSSProperties = {
   flexDirection: 'column',
   alignItems: 'flex-start',
   width: '100%',
-  padding: '0 4px',
-  margin: '6px 0',
+  padding: '0 40px',
+  margin: '60px 0',
+};
+
+export const taskCounterGrid: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  marginBottom: '80px',
 };

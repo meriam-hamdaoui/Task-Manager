@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import { createTaskBox } from '../../../theme/cssObject';
+import { createTaskBox } from '@theme/cssObject';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
 import { TaskDateField } from './_taskDateField';
@@ -10,7 +10,7 @@ import { Priority } from './enums/Priority';
 
 export const CreateTaskForm: FC = (): ReactElement => {
   return (
-    <Box sx={createTaskBox}>
+    <Box sx={{ ...createTaskBox }}>
       <Typography variant="h6" component={'h2'} mb={2}>
         Create A Task
       </Typography>

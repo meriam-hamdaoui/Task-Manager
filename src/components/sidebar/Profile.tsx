@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
-import { avatarSX } from '../../theme/cssObject';
+import { avatarSX } from '@theme/cssObject';
 import PropTypes from 'prop-types';
 
 // typescript checking only on compiler time
