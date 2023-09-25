@@ -4,17 +4,17 @@ import { ITaskDescription } from './interfaces/ITaskDescription';
 import PropTypes from 'prop-types';
 
 export const TaskDescription: FC<ITaskDescription> = ({
-  text = `Lorem ipsum dolor sit amet consectetur adipisicing
+  description = `Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Non fugiat ipsam autem, error sit provident
         quo repellendus minima`,
 }): ReactElement => {
   return (
     <Box>
-      <Typography>{text}</Typography>
+      <Typography>{description}</Typography>
     </Box>
   );
 };
 
 TaskDescription.propTypes = {
-  text: PropTypes.string,
+  description: PropTypes.string,
 };

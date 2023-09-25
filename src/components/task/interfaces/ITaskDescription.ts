@@ -1,3 +1,3 @@
 export interface ITaskDescription {
-  text?: string;
+  description?: string;
 }
