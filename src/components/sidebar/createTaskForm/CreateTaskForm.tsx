@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import { createTaskBox } from '@theme/cssObject';
+import { createTaskBox } from 'theme/cssObject';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDescriptionField';
 import { TaskDateField } from './_taskDateField';

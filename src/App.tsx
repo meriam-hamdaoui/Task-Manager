@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import { customTheme } from '@theme/customTheme';
-import { Dashboard } from '@pages/dashboard/Dashboard';
+import { customTheme } from 'theme/customTheme';
+import { Dashboard } from 'pages/dashboard/Dashboard';
 
 const App: FC = (): ReactElement => {
   return (

@@ -30,7 +30,6 @@ export const avatarSX: CSSProperties = {
 export const counterAvatar: CSSProperties = {
   ...avatarCSS,
   border: '5px solid',
-  borderColor: 'warning.light',
   backgroundColor: 'transparent',
 };
 
